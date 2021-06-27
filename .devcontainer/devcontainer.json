@@ -1,0 +1,28 @@
+{
+    "name": "Julia dev container",
+
+    // specify your workspace
+    "context": "..",
+
+    "dockerFile": "Dockerfile",
+
+    "settings": {
+
+        // set path of git
+        "git.path": "/usr/bin/git",
+
+        // save changes automatically
+        "files.autoSave": "afterDelay",
+    },
+
+    // user name of container
+    "remoteUser": "root",
+
+    // specify vs code extensions you will use on remote
+    "extensions": [
+        // mandatory for julia development
+        "julialang.language-julia",
+        // Recommended to use in order to follow style guide
+        "editorconfig.editorconfig"
+    ]
+}
