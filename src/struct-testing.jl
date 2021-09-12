@@ -23,7 +23,7 @@ mutable struct DekaiStruct
 
 end
 
-DakaiStruct(param::Tuple{Float64, Float64, Float64}, initvalues::InitValues, datanum::Int64) = begin
+DekaiStruct(param::Tuple{Float64, Float64, Float64}, initvalues::InitValues, datanum::Int64) = begin
 
     data1 = DataSet1(param[1], param[2], param[3])
 
