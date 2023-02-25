@@ -1,12 +1,16 @@
 using YAML, DelimitedFiles
 
 YAMLfilename = "src/fileIO/matrix.yml"
-TEXTfilename = "src/fileIO/matrix.txt"
 
 yamlread = YAML.load_file(YAMLfilename)
-println(yamlread["A"])
+println("read from:")
+display(yamlread["A"])
+println()
 
-io = open(TEXTfilename, "r");
-IOread = read(io, String)
+# delimiter is space
+delimiter = ' '
 
-delim_data = readdlm(TEXTfilename, ',', Float64, '\n')
+matrix =readdlm(IOBuffer(yamlread["A"]), delimiter)
+
+println("obtained matrix:")
+display(matrix)
